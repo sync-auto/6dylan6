@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 """
-cron: 15 4 */2 * *
+cron: 15 2 * * *
 new Env('重复任务优化');
 """
 
@@ -58,7 +58,10 @@ def get_tasklist() -> list:
     response = requests.get(url=url, headers=headers)
     datas = json.loads(response.content.decode("utf-8"))
     if datas.get("code") == 200:
-        tasklist = datas.get("data")
+        try:
+            tasklist = datas.get("data").get("data")
+        except Exception:
+            tasklist = datas.get("data")
     return tasklist
 
 
