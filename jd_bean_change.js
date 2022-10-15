@@ -1592,7 +1592,7 @@ function getJingBeanBalanceDetail(page) {
 			"url": `https://api.m.jd.com/client.action?functionId=getJingBeanBalanceDetail`,
 			"body": `body=${escape(JSON.stringify({"pageSize": "20", "page": page.toString()}))}&appid=ld`,
 			"headers": {
-				'User-Agent': $.isNode() ? (process.env.JD_USER_AGENT ? process.env.JD_USER_AGENT : (require('./USER_AGENTS').USER_AGENT)) : ($.getdata('JDUA') ? $.getdata('JDUA') : "jdapp;iPhone;9.4.4;14.3;network/4g;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1"),
+				'User-Agent': "jdapp;android;11.0.1;;;Mozilla/5.0 (Linux; Android 11; Redmi K30 5G Build/RKQ1.200826.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/76.0.3809.89 MQQBrowser/6.2 TBS/045511 Mobile Safari/537.36",
 				'Host': 'api.m.jd.com',
 				'Content-Type': 'application/x-www-form-urlencoded',
 				'Cookie': cookie,
